@@ -7,7 +7,7 @@ where
   T: Clone + Debug,
 {
   data: Box<T>,
-  next: Option<Box<ListItem<T>>>,
+  next: Option<Box<&ListItem<T>>>,
 }
 
 /// Represents a recursive item in a list as an enumeration.
@@ -50,8 +50,8 @@ fn main() {
     next: None,
   };
 
-  item_1.next = Some(Box::new(item_2.clone()));
-  item_2.next = Some(Box::new(item_3.clone()));
+  item_1.next = Some(Box::new(&item_2));
+  item_2.next = Some(Box::new(&item_3));
   item_3.next = None;
 
   let items = vec![&item_1, &item_2, &item_3];

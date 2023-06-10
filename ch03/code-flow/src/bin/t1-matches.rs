@@ -162,7 +162,7 @@ fn main() {
   println!("********** Some or None **********");
 
   some_or_none(&Some("ABC"));
-  some_or_none(&Option::<String>::None);
+  some_or_none(None);
 
   println!("********** What integer is **********");
 
