@@ -34,4 +34,7 @@ $ cargo run --bin t5-errors
 
 ##  Global state
 
-(pending)
+```shel
+$ cargo run --bin t5-errors
+```
+
